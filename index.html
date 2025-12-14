@@ -2,101 +2,74 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>LearnLab | Learn English by Doing</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LearnLab | Learn English by Doing</title>
   <style>
-    body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      background: #f4f6f8;
-      color: #333;
-    }
-    header {
-      background: #2563eb;
-      color: white;
-      padding: 20px;
-      text-align: center;
-    }
-    section {
-      padding: 20px;
-      max-width: 900px;
-      margin: auto;
-    }
-    .box {
-      background: white;
-      padding: 15px;
-      margin-bottom: 15px;
-      border-radius: 8px;
-    }
-    footer {
-      background: #1e293b;
-      color: white;
-      text-align: center;
-      padding: 10px;
-    }
+    body { font-family: Arial, sans-serif; margin:0; background:#f7f9fc; color:#333; }
+    header { background:#2563eb; color:white; padding:2rem; text-align:center; }
+    header h1 { margin:0; font-size:2.5rem; }
+    header p { margin-top:0.5rem; font-size:1.2rem; }
+    nav { background:#1e40af; padding:1rem; text-align:center; }
+    nav a { color:white; margin:0 1rem; text-decoration:none; font-weight:bold; }
+    section { padding:2rem; max-width:1100px; margin:auto; }
+    .grid { display:grid; grid-template-columns:repeat(auto-fit, minmax(250px, 1fr)); gap:1.5rem; }
+    .card { background:white; padding:1.5rem; border-radius:12px; box-shadow:0 4px 10px rgba(0,0,0,0.08); }
+    .card h3 { margin-top:0; color:#2563eb; }
+    footer { background:#1e293b; color:white; text-align:center; padding:1.5rem; font-size:0.9rem; }
   </style>
 </head>
 <body>
 
 <header>
   <h1>LearnLab</h1>
-  <p>Learn English by Doing (Project-Based Learning)</p>
+  <p>Learn English by Doing – Project-Based Learning</p>
 </header>
 
-<section>
-  <h2>Welcome to LearnLab</h2>
-  <p>
-    LearnLab helps you learn English by practicing real tasks. 
-    You learn by doing projects, not by memorizing rules.
-  </p>
-</section>
+<nav>
+  <a href="#words">Words</a>
+  <a href="#sentences">Sentences</a>
+  <a href="#oral">Oral English</a>
+  <a href="#composition">Composition</a>
+  <a href="#comprehension">Comprehension</a>
+</nav>
 
-<section>
-  <h2>What You Will Learn</h2>
-
-  <div class="box">
-    <h3>Words</h3>
-    <p>Learn new English words by using them in short daily projects.</p>
-    <p><strong>Example project:</strong> Create a personal word list with 10 new words.</p>
-  </div>
-
-  <div class="box">
-    <h3>Sentence Structure</h3>
-    <p>Learn how to make correct sentences.</p>
-    <p><strong>Example project:</strong> Write 5 sentences about your daily routine.</p>
-  </div>
-
-  <div class="box">
-    <h3>Oral English</h3>
-    <p>Practice speaking English clearly and confidently.</p>
-    <p><strong>Example project:</strong> Record a 1-minute talk about yourself.</p>
-  </div>
-
-  <div class="box">
-    <h3>Composition</h3>
-    <p>Learn writing by creating short texts.</p>
-    <p><strong>Example project:</strong> Write a short email or story.</p>
-  </div>
-
-  <div class="box">
-    <h3>Comprehension</h3>
-    <p>Improve reading and listening understanding.</p>
-    <p><strong>Example project:</strong> Read a short story and answer questions.</p>
+<section id="words">
+  <h2>Words</h2>
+  <div class="card">
+    <p>Learn new words through mini-projects: create personal dictionaries, label objects around you, and keep a word journal.</p>
   </div>
 </section>
 
-<section>
-  <h2>How LearnLab Works</h2>
-  <ol>
-    <li>Read a simple lesson</li>
-    <li>Do a small project</li>
-    <li>Practice every day</li>
-    <li>Improve step by step</li>
-  </ol>
+<section id="sentences">
+  <h2>Sentence Structure</h2>
+  <div class="card">
+    <p>Practice building correct sentences through daily tasks like writing your routine, instructions, and simple messages.</p>
+  </div>
+</section>
+
+<section id="oral">
+  <h2>Oral English</h2>
+  <div class="card">
+    <p>Improve speaking skills by role-playing, recording yourself, and practicing conversations.</p>
+  </div>
+</section>
+
+<section id="composition">
+  <h2>Composition</h2>
+  <div class="card">
+    <p>Learn writing by completing small projects like emails, short stories, journals, and essays.</p>
+  </div>
+</section>
+
+<section id="comprehension">
+  <h2>Comprehension</h2>
+  <div class="card">
+    <p>Read short passages and answer questions to improve understanding and critical thinking.</p>
+  </div>
 </section>
 
 <footer>
-  <p>© 2025 LearnLab.com | Learn English by Doing</p>
+  &copy; 2025 LearnLab. All rights reserved.
 </footer>
 
 </body>
