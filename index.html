@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>LearnLab | Learn English by Doing</title>
+  <title>LearnLab | Project-Based English Learning</title>
   <style>
     body { font-family: Arial, sans-serif; margin:0; background:#f7f9fc; color:#333; }
     header { background:#2563eb; color:white; padding:2rem; text-align:center; }
@@ -11,10 +11,11 @@
     header p { margin-top:0.5rem; font-size:1.2rem; }
     nav { background:#1e40af; padding:1rem; text-align:center; }
     nav a { color:white; margin:0 1rem; text-decoration:none; font-weight:bold; }
-    section { padding:2rem; max-width:800px; margin:auto; }
+    section { padding:2rem; max-width:900px; margin:auto; }
     .card { background:white; padding:1.5rem; border-radius:12px; box-shadow:0 4px 10px rgba(0,0,0,0.08); margin-bottom:2rem; }
     .card h3 { margin-top:0; color:#2563eb; }
     input[type="text"] { padding:0.5rem; width:80%; margin-top:0.5rem; }
+    textarea { width:100%; padding:0.5rem; margin-top:0.5rem; }
     button { padding:0.5rem 1rem; margin-top:0.5rem; background:#2563eb; color:white; border:none; border-radius:5px; cursor:pointer; }
     .answer { margin-top:0.5rem; color:green; font-weight:bold; }
     footer { background:#1e293b; color:white; text-align:center; padding:1.5rem; font-size:0.9rem; }
@@ -24,23 +25,23 @@
 
 <header>
   <h1>LearnLab</h1>
-  <p>Learn English by Doing – Project-Based Learning</p>
+  <p>Project-Based English Learning</p>
 </header>
 
 <nav>
-  <a href="#words">Words</a>
-  <a href="#sentences">Sentences</a>
-  <a href="#oral">Oral English</a>
-  <a href="#composition">Composition</a>
-  <a href="#comprehension">Comprehension</a>
+  <a href="#words">Words Project</a>
+  <a href="#sentences">Sentence Project</a>
+  <a href="#oral">Oral Project</a>
+  <a href="#composition">Composition Project</a>
+  <a href="#comprehension">Comprehension Project</a>
 </nav>
 
 <section id="words">
   <div class="card">
-    <h3>Words</h3>
-    <p>Learn new words through mini-projects.</p>
-    <p>Example Exercise: Type the meaning of this word: <strong>Apple</strong></p>
-    <input type="text" id="wordInput" placeholder="Your answer...">
+    <h3>Words Project (7 Days)</h3>
+    <p>Read a good book for 7 days and collect 50 words. Write their meaning and use them in sentences. Try to solve a problem by using these words in a story.</p>
+    <p>Exercise: Type the meaning of "Innovation"</p>
+    <input type="text" id="wordInput" placeholder="Type meaning...">
     <button onclick="checkWord()">Check</button>
     <div class="answer" id="wordAnswer"></div>
   </div>
@@ -48,9 +49,9 @@
 
 <section id="sentences">
   <div class="card">
-    <h3>Sentence Structure</h3>
-    <p>Practice making correct sentences.</p>
-    <p>Exercise: Arrange the words to make a correct sentence: <em>is / My / cat / small</em></p>
+    <h3>Sentence Structure Project</h3>
+    <p>Learn how to construct sentences and deconstruct them. Rebuild sentences to solve a problem, e.g., giving clear instructions.</p>
+    <p>Exercise: Rearrange to form a correct sentence: "is / my / project / interesting"</p>
     <input type="text" id="sentenceInput" placeholder="Type your sentence...">
     <button onclick="checkSentence()">Check</button>
     <div class="answer" id="sentenceAnswer"></div>
@@ -59,26 +60,32 @@
 
 <section id="oral">
   <div class="card">
-    <h3>Oral English</h3>
-    <p>Practice speaking simple sentences aloud.</p>
-    <p>Exercise: Say aloud – <strong>Hello, my name is [Your Name]</strong></p>
+    <h3>Oral English Project</h3>
+    <p>Learn sounds and transcription. Solve a problem by explaining your daily routine aloud and transcribing it.</p>
+    <p>Exercise: Type transcription of: "I wake up at 7 AM and eat breakfast"</p>
+    <input type="text" id="oralInput" placeholder="Type transcription...">
+    <button onclick="checkOral()">Check</button>
+    <div class="answer" id="oralAnswer"></div>
   </div>
 </section>
 
 <section id="composition">
   <div class="card">
-    <h3>Composition</h3>
-    <p>Write a short paragraph about your day.</p>
-    <p>Example: "Today I woke up at 7am. I ate breakfast and went to school."</p>
+    <h3>Composition Project</h3>
+    <p>Write letters or essays on an important topic. Solve a real problem by your writing, e.g., "How to keep your city clean".</p>
+    <p>Exercise: Type your first paragraph:</p>
+    <textarea id="compositionInput" rows="4" placeholder="Type here..."></textarea>
+    <button onclick="checkComposition()">Check</button>
+    <div class="answer" id="compositionAnswer"></div>
   </div>
 </section>
 
 <section id="comprehension">
   <div class="card">
-    <h3>Comprehension</h3>
-    <p>Read the passage and answer the question:</p>
-    <p>Passage: "John has a dog. The dog is very friendly."</p>
-    <p>Question: What kind of pet does John have?</p>
+    <h3>Comprehension Project</h3>
+    <p>Read passages and answer questions. Solve a problem based on what you read, e.g., summarize and suggest a solution.</p>
+    <p>Passage: "The city has too much plastic waste. Citizens need to reduce, reuse, and recycle."</p>
+    <p>Question: What is one solution to reduce plastic waste?</p>
     <input type="text" id="comprehensionInput" placeholder="Your answer...">
     <button onclick="checkComprehension()">Check</button>
     <div class="answer" id="comprehensionAnswer"></div>
@@ -92,8 +99,8 @@
 <script>
   function checkWord() {
     let input = document.getElementById('wordInput').value.toLowerCase();
-    if(input === 'a fruit' || input === 'fruit') {
-      document.getElementById('wordAnswer').innerText = 'Correct! Apple is a fruit.';
+    if(input.includes('new idea') || input.includes('creativity')) {
+      document.getElementById('wordAnswer').innerText = 'Correct! Innovation relates to new ideas.';
     } else {
       document.getElementById('wordAnswer').innerText = 'Try again!';
     }
@@ -101,17 +108,35 @@
 
   function checkSentence() {
     let input = document.getElementById('sentenceInput').value.toLowerCase();
-    if(input === 'my cat is small') {
+    if(input === 'my project is interesting') {
       document.getElementById('sentenceAnswer').innerText = 'Correct!';
     } else {
       document.getElementById('sentenceAnswer').innerText = 'Try again!';
     }
   }
 
+  function checkOral() {
+    let input = document.getElementById('oralInput').value.toLowerCase();
+    if(input.includes('i wake up at 7 am')) {
+      document.getElementById('oralAnswer').innerText = 'Correct transcription!';
+    } else {
+      document.getElementById('oralAnswer').innerText = 'Try again!';
+    }
+  }
+
+  function checkComposition() {
+    let input = document.getElementById('compositionInput').value;
+    if(input.length > 20) {
+      document.getElementById('compositionAnswer').innerText = 'Good start! Keep writing.';
+    } else {
+      document.getElementById('compositionAnswer').innerText = 'Try to write more details.';
+    }
+  }
+
   function checkComprehension() {
     let input = document.getElementById('comprehensionInput').value.toLowerCase();
-    if(input.includes('dog')) {
-      document.getElementById('comprehensionAnswer').innerText = 'Correct!';
+    if(input.includes('reduce') || input.includes('reuse') || input.includes('recycle')) {
+      document.getElementById('comprehensionAnswer').innerText = 'Correct! That is a solution.';
     } else {
       document.getElementById('comprehensionAnswer').innerText = 'Try again!';
     }
